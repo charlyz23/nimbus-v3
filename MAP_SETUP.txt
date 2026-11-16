@@ -1,0 +1,38 @@
+NIMBUS V3 — OFFLINE PHILIPPINES MAP
+
+WHAT THIS UPDATE CHANGES
+- Uses a downloadable OpenStreetMap vector map covering the Philippines.
+- After the first download, map viewing, panning, and zooming work without internet.
+- Keeps the selected-town marker and existing town selection.
+- Keeps HomeScreen, SMS, saved replies, and the existing bottom-sheet UI unchanged.
+
+INSTALL
+1. In Terminal run:
+
+   cd ~/Downloads/nimbus-v3/flutter_app
+   flutter pub get
+
+2. Run:
+
+   flutter analyze
+   flutter run
+
+   To build the APK:
+   flutter build apk --release
+
+3. On the map, tap Download map and confirm. The download is approximately
+   520 MB, so Wi-Fi is strongly recommended. Keep Nimbus open until it finishes.
+   The map is saved in app storage and is not included in the APK.
+
+IMPORTANT DATA LIMITATIONS
+- Town latitude/longitude values are approximate city-centre positions used to centre the map. They are not barangay boundaries.
+- The current stormAt/stormTrack values and flood-zone rectangles in town_pack.dart are drawing coordinates, not GPS coordinates. They are deliberately NOT drawn on the real map, because placing them geographically would be misleading.
+- Your SMS flood/evacuation/road information still appears in the existing bottom sheet. To draw actual flood zones or a real typhoon track on the map, the backend/SMS protocol must provide real latitude/longitude points or geographic polygons.
+- Geofabrik labels the Shortbread MBTiles extract experimental. It is a general-purpose street map, not an authoritative emergency-navigation source.
+- The map pack is downloaded once and is not automatically refreshed. Updates will require downloading a newer pack.
+
+MAP DATA / ATTRIBUTION
+The offline pack is provided by Geofabrik and contains OpenStreetMap data. Keep
+the visible “© OpenStreetMap contributors · Geofabrik” attribution. OpenStreetMap
+data is available under the Open Database License (ODbL); review its license
+and attribution requirements before redistributing the app or map pack.
