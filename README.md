@@ -1,6 +1,6 @@
 # Nimbus v3
 
-White-and-blue redesign of the Nimbus demo: a map-first Android app with a typhoon indicator, plus the SMS server view, keyword SMS for any phone, and the LGU console from v2.
+ Nimbus app demo: a map-first Android app with a typhoon indicator, plus the SMS server view, keyword SMS for any phone, and the LGU console from v2.
 
 | Path | What it is |
 |---|---|
